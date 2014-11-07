@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Common;
 using System.Text;
 
-namespace blqw.Data
+namespace blqw
 {
     /// <summary> 用于操作数据库的帮助类接口
     /// </summary>
@@ -22,6 +22,10 @@ namespace blqw.Data
         string ProviderName { get; }
         #endregion
 
+        /// <summary> 关闭数据库连接
+        /// </summary>
+        void Close();
+
         #region transaction
         /// <summary> 开启默认事务
         /// </summary>
@@ -35,7 +39,7 @@ namespace blqw.Data
         /// <summary> 开启指定事务
         /// </summary>
         /// <param name="il"></param>
-        DbTransaction Begin(IsolationLevel il);
+        DbTransaction Begin(IsolationLevel iso);
         #endregion
 
         #region execute

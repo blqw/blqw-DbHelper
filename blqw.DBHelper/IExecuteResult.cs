@@ -7,11 +7,11 @@ namespace blqw
 {
     public interface IExecuteResult
     {
-        public ExecuteAction Action { get; }
-        public int NonQuery { get; }
-        public IDataReader DataReader { get; }
-        public object Scalar { get; }
-        public DataTable DataTable { get; }
-        public DataSet DataSet { get; }
+        ExecuteAction Action { get; }
+        int NonQuery { get; }
+        IDataReader DataReader { get; }
+        object Scalar { get; }
+        DataTable DataTable { get; }
+        DataSet DataSet { get; }
     }
 }
