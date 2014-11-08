@@ -7,7 +7,7 @@ namespace blqw
 {
     /// <summary> 计数器,具有单线程模式和多线程模式
     /// </summary>
-    public class Counter
+    public sealed class Counter
     {
         /// <summary> 构造一个计数器,默认单线程模式
         /// <para>无论在任何线程中每次执行Add方法都会增加引用数,执行Remove或者token.Dispose都会减少引用数</para>
